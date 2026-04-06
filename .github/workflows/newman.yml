@@ -13,6 +13,9 @@ jobs:
       - name: List files (debugging)
         run: ls -la  # Helps verify files exist
 
+      - name: Create testResults directory
+        run: mkdir -p testResults
+
       - name: Run API Tests
         run: newman run ai-assisted-postman-collection.json -e new-env-postman_environment.json
          --reporters cli,json \
