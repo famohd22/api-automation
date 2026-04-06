@@ -13,13 +13,14 @@ jobs:
       - name: List files (debugging)
         run: ls -la  # Helps verify files exist
 
+      - name: Install the html extra reporter
+        run:  npm install -g newman-reporter-htmlextra
+
       - name: Create testResults directory
         run: mkdir -p testResults
 
       - name: Run API Tests
-        run: newman run ai-assisted-postman-collection.json -e new-env-postman_environment.json
-         --reporters cli,json \
-         --reporter-json-export testResults/results.json
+        run: newman run ai-assisted-postman-collection.json -e new-env-postman_environment.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html
 
       - name: Output the run Details
         uses: actions/upload-artifact@v6
