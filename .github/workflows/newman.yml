@@ -15,3 +15,9 @@ jobs:
 
       - name: Run API Tests
         run: newman run ai-assisted-postman-collection.json -e new-env-postman_environment.json
+
+      - name: Output the run Details
+        uses: actions/upload-artifact@v6
+        with: 
+          name: RunReports
+          path: testResults
