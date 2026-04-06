@@ -32,6 +32,24 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "get-pet",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base-url}}/pet/12345",
+          "host": [
+            "{{base-url}}"
+          ],
+          "path": [
+            "pet",
+            "12345"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
