@@ -50,6 +50,32 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "update-pet",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 12345,\n  \"name\": \"Julie\",\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Cats\"\n  },\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"aloof\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base-url}}/pet",
+          "host": [
+            "{{base-url}}"
+          ],
+          "path": [
+            "pet"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
