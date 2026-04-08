@@ -14,7 +14,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"id\": 12345,\n  \"name\": \"Buddy\",\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"photoUrls\": [\n    \"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_2851.jpg\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"friendly\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+          "raw": "{\n  \"id\": 123452226,\n  \"name\": \"Rowan\",\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"photoUrls\": [\n    \"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_2851.jpg\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"friendly\"\n    }\n  ],\n  \"status\": \"available\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -39,13 +39,13 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{base-url}}/pet/12345",
+          "raw": "{{base-url}}/pet/123452226",
           "host": [
             "{{base-url}}"
           ],
           "path": [
             "pet",
-            "12345"
+            "123452226"
           ]
         }
       },
@@ -58,7 +58,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"id\": 12345,\n  \"name\": \"Julie\",\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Cats\"\n  },\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"aloof\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+          "raw": "{\n  \"id\": 123452226,\n  \"name\": \"Julie\",\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Cats\"\n  },\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"aloof\"\n    }\n  ],\n  \"status\": \"available\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -72,6 +72,58 @@
           ],
           "path": [
             "pet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete-pet",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "api_key",
+            "value": "special-key",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{base-url}}/pet/123452226",
+          "host": [
+            "{{base-url}}"
+          ],
+          "path": [
+            "pet",
+            "123452226"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "pet-by-status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base-url}}/pet/findByStatus?status=available",
+          "host": [
+            "{{base-url}}"
+          ],
+          "path": [
+            "pet",
+            "findByStatus"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "available"
+            }
           ]
         }
       },
